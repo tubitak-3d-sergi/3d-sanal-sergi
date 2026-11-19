@@ -4,28 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TÜBİTAK Sanal Sergi test sürümü</title>
+    <!--A-Frame kütüphanesi-->
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <!--A-FRame fizik kütüphanesi-->
     <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.min.js"></script>
+    <!--A-Frame ekstra kütüphanesi-->
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 </head>
 <body>
-    <a-scene physics="debug: false; gravity: -9.8; iterations: 20;">
+    <a-scene physics="debug: false; gravity: -9.8; iterations: 35;">
       
-        <a-plane position="0 0 0" rotation="-90 0 0" width="70" height="70" src="plan.png" static-body></a-plane>
+        <a-plane position="0 0 0" rotation="-90 0 0" width="70" height="70" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS908MtFTPzgAs5N7P_MvSmoV2Z6L09AJ_0tTY8GfA7JQ&s=10" static-body></a-plane>
         <a-sky src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtgJ-tmY1iV03hyBsWxqAfMMOKrMqXP2Mvg2CAnfKTrQ&s=10"></a-sky>
         
-        <a-entity id="karakter" position="0 0 30" movement-controls kinematic-body="radius: 0.6; height: 10;" rotation="0 0 0" > 
-            <a-camera look-controls wasd-controls="acceleration: 15" position="0 10 0"></a-camera>
+        <a-entity id="karakter" position="1.8 0 29.5" movement-controls kinematic-body="radius: 0.6; height: 0;" rotation="0 0 0" > 
+            <a-camera look-controls wasd-controls="acceleration: 35" position="0 1.6 0"></a-camera>
         </a-entity>
+        <!--başlangıç göstergesi-->
+        <a-box position="1.8 0 29.5" static-body="shape: box;" width="2.5" height="0.1" depth="2.5" color="#FF0000"></a-box>
         <!-- kısa çizgiler-->
         <a-box position="-9.234 1.678 5" static-body="shape: box;" width="14" height="5.5" depth="2" color="#BBBBBB"></a-box>
         <a-box position="12.8 1.678 5" static-body="shape: box;" width="14" height="5.5" depth="2" color="#BBBBBB"></a-box>
         <!--uzun çizgiler-->
         <a-box position="-3.234 1.678 19" static-body="shape: box;" width="2" height="5.5" depth="26" color="#BBBBBB"></a-box>
         <a-box position="6.834 1.678 19" static-body="shape: box;" width="2" height="5.5" depth="26" color="#BBBBBB"></a-box>
+        <a-box position="19.634 1.678 17" static-body="shape: box;" width="2" height="5.5" depth="26" color="#BBBBBB"></a-box> 
+        <a-box position="-16 1.678 -4.4" static-body="shape: box;" width="2" height="5.5" depth="21" color="#BBBBBB"></a-box>
         <!--kısa taban çizgiler-->
         <a-box position="1.8 1.678 33" static-body="shape: box;" width="12" height="5.5" depth="2" color="#BBBBBB"></a-box>
-        
+        <a-box position="25.3 1.678 30" static-body="shape: box;" width="13" height="5.5" depth="2" color="#BBBBBB"></a-box>
     </a-scene>
     
 </body>             
