@@ -9,16 +9,18 @@
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 </head>
 <body>
-    <a-scene physics="debug: true; gravity: -9.8; iterations: 20;">
+    <a-scene physics="debug: false; gravity: -9.8; iterations: 20;">
       
-        <a-plane position="0 0 0" rotation="-90 0 0" width="70" height="70" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS908MtFTPzgAs5N7P_MvSmoV2Z6L09AJ_0tTY8GfA7JQ&s=10" static-body></a-plane>
+        <a-plane position="0 0 0" rotation="-90 0 0" width="70" height="70" src="plan.png" static-body></a-plane>
         <a-sky src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtgJ-tmY1iV03hyBsWxqAfMMOKrMqXP2Mvg2CAnfKTrQ&s=10"></a-sky>
         
-        <a-entity id="karakter" position="0 0 10" movement-controls kinematic-body="radius: 0.6; height: 1.6;" > 
-            <a-camera look-controls wasd-controls="acceleration: 15" position="0 1.6 0"></a-camera>
+        <a-entity id="karakter" position="0 0 30" movement-controls kinematic-body="radius: 0.6; height: 10;" rotation="0 0 0" > 
+            <a-camera look-controls wasd-controls="acceleration: 15" position="0 10 0"></a-camera>
         </a-entity>
 
-        <a-box position="0 1.678 5" static-body="shape: box;" width="2" height="3" depth="2" color="#BBBBBB"></a-box>
+        <a-box position="-9.234 1.678 5" static-body="shape: box;" width="14" height="4" depth="2" color="#BBBBBB"></a-box>
+        <a-box position="-3.234 1.678 19" static-body="shape: box;" width="2" height="4" depth="26" color="#BBBBBB"></a-box>
+        <a-box position="-0.2 1.678 33" static-body="shape: box;" width="8" height="4" depth="2" color="#BBBBBB"></a-box>
     </a-scene>
     
 </body>             
